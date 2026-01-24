@@ -87,6 +87,8 @@ RUN chown -R user:user /workspace
 RUN mkdir /home/user/.cache && \
     chown -R user:user /home/user/.cache
 
+COPY --chown=user:user . .
+
 COPY entrypoint.sh /workspace/entrypoint.sh
 
 ENTRYPOINT ["/workspace/entrypoint.sh"]
