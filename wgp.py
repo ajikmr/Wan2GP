@@ -11318,7 +11318,7 @@ if __name__ == "__main__":
     os.environ["GRADIO_ANALYTICS_ENABLED"] = "False"
     server_port = int(args.server_port)
     if server_port == 0:
-        server_port = int(os.getenv("SERVER_PORT", "7860"))
+        server_port = int(os.getenv("SERVER_PORT", os.getenv("PORT", "7860")))
     server_name = args.server_name
     if args.listen:
         server_name = "0.0.0.0"
