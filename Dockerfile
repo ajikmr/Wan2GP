@@ -17,7 +17,7 @@ FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04
 #
 # Note: Including 8.9 or 9.0 may cause compilation issues on some setups
 # Default includes 8.0 and 8.6 for broad Ampere compatibility
-ARG CUDA_ARCHITECTURES="8.0;8.6"
+ARG CUDA_ARCHITECTURES="8.0;8.6;8.9"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
